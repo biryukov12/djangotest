@@ -1,0 +1,31 @@
+{% extends 'html/base.html' %}
+
+{% block title %}
+    Share: "{{ article.slug }}"
+{% endblock %}
+
+{% block nav %} {% include 'html/elements/nav.html' with is_home=True %} {% endblock %}
+
+{% block content %}
+
+    {% if sent %}
+        <h2>E-mail successfully sent</h2>
+        <p>
+            "{{ article.title }}" was successfully sent to {{ cd.to }}.
+        </p>
+    {% else %}
+        <div style="margin-top: 150px; width: 100%">
+            <h4 style="margin-bottom: 30px">Share: "{{ article.title }}" by e-mail.</h4>
+            <form action="." method="post" style="display: table; margin: 0 auto">
+                {% csrf_token %}
+                {% for field in form %}
+                    <div class="md-form">
+                        <label for="{{ field.name }}">{{ field.label }}</label> {{ field }}
+                    </div>
+                {% endfor %}
+                <button type="submit" class="btn btn-pink btn-block">Share</button>
+            </form>
+        </div>
+    {% endif %}
+
+{% endblock %}

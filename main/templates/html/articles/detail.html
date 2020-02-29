@@ -1,0 +1,31 @@
+{% extends 'html/base.html' %}
+
+{% block title %}
+    {{ article.title }}
+{% endblock %}
+
+{% block nav %} {% include 'html/elements/nav.html' with is_articles=True %} {% endblock %}
+
+{% block content %}
+
+    <div class="detail-articles">
+
+        <h1 class="article-title"> {{ article.title }} </h1>
+
+        <div class="detail-text">
+            {{ article.body|linebreaks }}
+        </div>
+
+        <p class="share-post">
+            <a href="{% url "article_share" article.slug %}">Share this article</a>
+        </p>
+
+        <small class="date">
+                Published {{ article.publish }} by {{ article.author }}
+        </small>
+
+        <p style="margin-top: 20px"><a href="/articles"><< Back to articles</a></p>
+
+    </div>
+
+{% endblock %}

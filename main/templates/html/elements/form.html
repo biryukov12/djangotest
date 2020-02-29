@@ -1,0 +1,17 @@
+<form class="form" style="width: 100%" method="post" action="/add_user_form/">
+    {% csrf_token %}
+    <div style="display: table; margin: 0 auto">
+        <h2 style="margin-bottom: 20px">Add user:</h2>
+        <div class="md-form" style="width: 450px">
+            {{ first_name.as_p }}
+            <input name="first_name" type="text" id="form1" class="form-control">
+            <label for="form1">First name</label>
+        </div>
+        <div class="md-form">
+            {{ second_name.as_p }}
+            <input name="second_name" type="text" id="form1" class="form-control">
+            <label for="form1">Second name</label>
+        </div>
+        <button type="submit" class="btn btn-primary btn-block">Add user</button>
+    </div>
+</form>

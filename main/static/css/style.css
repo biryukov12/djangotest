@@ -1,0 +1,144 @@
+* {
+    color: #f3f3f3;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #222222;
+    position: relative;
+    padding-bottom: 53px;
+    min-height: 100vh;
+}
+
+h3 {
+    margin:0 auto 20px 0;
+}
+
+a {
+    color: hotpink;
+}
+
+a:hover {
+    color: deeppink;
+    text-decoration: none;
+}
+
+a:active {
+    color: darkred;
+}
+
+.wrapper {
+    width: 100%;
+}
+
+.content {
+    display: table;
+    margin: auto;
+}
+
+.active {
+    font-weight: bold;
+}
+
+.table-dark {
+    background-color: #222
+}
+
+.table .thead-dark th {
+    background-color: #111;
+    border-top-color:#222;
+    border-bottom-color: #444;
+}
+
+.table-dark td {
+    border-top: 2px solid #444;
+}
+
+.home {
+    margin-top: 500px;
+    margin-right: 950px;
+}
+
+.home-text {
+    width: 700px;
+    font-size: 12pt;
+    text-align: justify;
+}
+
+.home-title {
+    color: hotpink;
+    font-weight: bold;
+    font-size: 42pt;
+    margin-bottom: 20px;
+}
+
+.users {
+    margin-top: 150px;
+}
+
+.form {
+     margin-top: 250px;
+}
+
+.form-group input {
+    color: #333;
+}
+
+#focus_on_1:valid, #focus_on_2:valid {
+    color: #28a745;
+}
+
+.list-articles {
+    margin-top: 70px;
+    width: 760px;
+    text-align: justify;
+}
+
+.detail-articles {
+    width: 960px;
+    margin: 100px 0 0 50px;
+    text-align: justify;
+    background-color: #323232;
+    padding: 20px;
+}
+
+nav .pagination {
+    padding-top: 10px;
+
+}
+
+.pagination-span {
+    font-size: 14px;
+    margin: 20px 0 20px 20px;
+}
+
+.article-text, .article-text {
+    font-size: 13pt;
+}
+
+.date {
+    color: #aaa;
+}
+
+.page-footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+.list-group-item {
+    background-color: #323232;
+    border: 10px solid #222;
+}
+
+.md-form {
+    width: 400px;
+}
+
+hr {
+    color: #454545;
+    background-color: #454545;
+    margin: 10px 0;
+}

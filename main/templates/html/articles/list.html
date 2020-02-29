@@ -1,0 +1,32 @@
+{% extends 'html/base.html' %}
+
+{% block title %}
+    Articles
+{% endblock %}
+
+{% block nav %} {% include 'html/elements/nav.html' with is_articles=True %} {% endblock %}
+
+{% block content %}
+
+    <div class="list-articles">
+        <ul class="list-group list-group-flush">
+            {% for article in articles %}
+                <li class="list-group-item">
+                    <h2>
+                        <a href="/articles/{{ article.slug }}"> {{ article.title }} </a>
+                    </h2>
+                    <div class="article-text">
+                        {{ article.body|truncatewords:30|linebreaks }}
+                    </div>
+                    <hr>
+                    <small class="date">
+                        Published {{ article.publish }} by {{ article.author }}
+                    </small>
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+
+    {% include 'html/elements/pagination.html' with page=articles %}
+
+{% endblock %}
