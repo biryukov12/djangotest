@@ -15,11 +15,10 @@
         <div class="detail-text">
             {{ article.body|linebreaks }}
         </div>
-
+        <hr>
         <small class="date">
                 Published {{ article.publish }} by {{ article.author }}
         </small>
-
         <div class="share-post">
             <button class="btn btn-pink btn-sm">
             <a href="/articles"><<</a>
@@ -28,8 +27,5 @@
             <a href="{% url "article_share" article.slug %}">Share this article</a>
             </button>
         </div>
-
-
     </div>
-
 {% endblock %}
