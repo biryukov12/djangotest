@@ -7,7 +7,7 @@
 {% block nav %} {% include 'html/elements/nav.html' with is_add_user=True %} {% endblock %}
 
 {% block content %}
-    <form class="form" style="width: 100%" method="post" action="/add_user_form/">
+    <form class="form" method="post" action="/add_user_form/">
         {% csrf_token %}
         <div style="display: table; margin: 0 auto">
             <h2 style="margin-bottom: 20px">Add user:</h2>

@@ -35,7 +35,7 @@ a:active {
 
 .content {
     display: table;
-    margin: auto;
+    margin: 100px auto;
 }
 
 .active {
@@ -57,7 +57,7 @@ a:active {
 }
 
 .home {
-    margin-top: 500px;
+    margin-top: 350px;
     margin-right: 950px;
 }
 
@@ -75,11 +75,21 @@ a:active {
 }
 
 .users {
-    margin-top: 150px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    margin: 0 auto;
+    right: 0;
+    left: 0;
 }
 
 .form {
-     margin-top: 250px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    margin: 0 auto;
+    right: 0;
+    left: 0;
 }
 
 .form-group input {
@@ -91,17 +101,27 @@ a:active {
 }
 
 .list-articles {
-    margin-top: 70px;
     width: 760px;
     text-align: justify;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    margin: 0 auto;
+    right: 0;
+    left: 0;
 }
 
 .detail-articles {
     width: 960px;
-    margin: 100px 0 0 50px;
     text-align: justify;
     background-color: #323232;
     padding: 20px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    margin: 0 auto;
+    right: 0;
+    left: 0;
 }
 
 nav .pagination {

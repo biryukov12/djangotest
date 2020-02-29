@@ -7,7 +7,6 @@
 {% block nav %} {% include 'html/elements/nav.html' with is_home=True %} {% endblock %}
 
 {% block content %}
-
     {% if sent %}
         <h2>E-mail successfully sent</h2>
         <p>
@@ -27,5 +26,4 @@
             </form>
         </div>
     {% endif %}
-
 {% endblock %}

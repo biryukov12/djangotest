@@ -106,4 +106,4 @@ def add_article(request):
 
 def test(request):
     args = None
-    return render(request, 'html/buttons.html', args)
+    return render(request, 'html/test.html', args)

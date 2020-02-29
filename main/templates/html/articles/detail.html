@@ -7,11 +7,8 @@
 {% block nav %} {% include 'html/elements/nav.html' with is_articles=True %} {% endblock %}
 
 {% block content %}
-
     <div class="detail-articles">
-
         <h1 class="article-title"> {{ article.title }} </h1>
-
         <div class="detail-text">
             {{ article.body|linebreaks }}
         </div>

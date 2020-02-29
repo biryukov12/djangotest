@@ -7,7 +7,6 @@
 {% block nav %} {% include 'html/elements/nav.html' with is_articles=True %} {% endblock %}
 
 {% block content %}
-
     <div class="list-articles">
         <ul class="list-group list-group-flush">
             {% for article in articles %}
@@ -25,8 +24,6 @@
                 </li>
             {% endfor %}
         </ul>
+        {% include 'html/elements/pagination.html' with page=articles %}
     </div>
-
-    {% include 'html/elements/pagination.html' with page=articles %}
-
 {% endblock %}
