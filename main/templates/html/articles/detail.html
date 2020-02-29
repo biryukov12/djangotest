@@ -16,15 +16,19 @@
             {{ article.body|linebreaks }}
         </div>
 
-        <p class="share-post">
-            <a href="{% url "article_share" article.slug %}">Share this article</a>
-        </p>
-
         <small class="date">
                 Published {{ article.publish }} by {{ article.author }}
         </small>
 
-        <p style="margin-top: 20px"><a href="/articles"><< Back to articles</a></p>
+        <p class="share-post">
+            <button class="btn btn-pink btn-sm">
+            <a href="/articles"><< Back to articles</a>
+            </button>
+            <button class="btn btn-pink btn-sm">
+            <a href="{% url "article_share" article.slug %}">Share this article</a>
+            </button>
+        </p>
+
 
     </div>
 
