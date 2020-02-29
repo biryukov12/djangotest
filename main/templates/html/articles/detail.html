@@ -20,14 +20,14 @@
                 Published {{ article.publish }} by {{ article.author }}
         </small>
 
-        <p class="share-post">
+        <div class="share-post">
             <button class="btn btn-pink btn-sm">
-            <a href="/articles"><< Back to articles</a>
+            <a href="/articles"><<</a>
             </button>
             <button class="btn btn-pink btn-sm">
             <a href="{% url "article_share" article.slug %}">Share this article</a>
             </button>
-        </p>
+        </div>
 
 
     </div>
