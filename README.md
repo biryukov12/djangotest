@@ -19,3 +19,5 @@ Django, SQLlite, MDBootstap.
 * share article by e-mail
 ---
 Говно, в общем.
+
+![Screenshot](https://github.com/biryukov12/djangotest/blob/master/main/static/img/github.jpg)
