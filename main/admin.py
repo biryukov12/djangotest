@@ -10,3 +10,4 @@ class UserAdmin(admin.ModelAdmin):
 @admin.register(Article)
 class ArticleAdmin(admin.ModelAdmin):
     list_display = ('id', 'title', 'slug', 'author', 'publish', 'status')
+    list_display_links = ('id', 'title')
