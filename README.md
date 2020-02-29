@@ -12,10 +12,10 @@ Django, SQLlite, MDBootstap.
   * pagination;
 * Send e-mail;
 * Design.
----
+
 ### In the future:
 * improvement pagination;
 * add new article form form;
 * share article by e-mail
-
-Говно пока что, в общем.
+---
+Говно, в общем.
