@@ -124,6 +124,15 @@ a:active {
     left: 0;
 }
 
+.share-post {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    margin: 0 auto;
+    right: 0;
+    left: 0;
+}
+
 nav .pagination {
     padding-top: 10px;
 
@@ -157,11 +166,11 @@ nav .pagination {
     width: 400px;
 }
 
-.share-post a {
+.share-post-btn a {
     color: #f2f2f2;
 }
 
-.share-post {
+.share-post-btn {
     margin-top: 15px;
     margin-left: -0.375rem;
 }

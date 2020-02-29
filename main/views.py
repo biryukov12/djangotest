@@ -10,29 +10,31 @@ from django.core.mail import send_mail
 def article_share(request, article_slug):
     article = get_object_or_404(Article, slug=article_slug)
     sent = False
-    if request.method == 'Post':
-        form = EmailArticleFrom(request.Post)
+    if request.method == 'POST':
+        form = EmailArticleFrom(request.POST)
+        print('form if: ', form)
         if form.is_valid():
             cd = form.cleaned_data
+            print(cd)
             article_url = request.build_absolute_uri(article.get_absolute_url())
             subject = '{} ({}) recommends for reading "{}"'.format(cd['name'],
-                                                                   cd['email'],
+                                                                   cd['email_from'],
                                                                    article.title)
+            print(subject)
 
-            message = 'Read "{}" at {}\n\n{}\'s comments: {}'.format(article.title,
-                                                                     article_url,
-                                                                     cd['name'],
-                                                                     cd['comments'])
-
-            send_mail(subject, message, '1204instagram@gmail.com', [cd['to']])
+            message = 'Article: "{}".\nLink: {}'.format(article.title, article_url)
+            print(message)
+            send_mail(subject, message, '1204instagram@gmail.com', [cd['email_to']])
             sent = True
     else:
         form = EmailArticleFrom()
+        print('form else: ', form)
     args = {
         'article': article,
         'form': form,
         'sent': sent
     }
+    print(args)
     return render(request, 'html/articles/share.html', args)
 
 
@@ -105,5 +107,11 @@ def add_article(request):
 
 
 def test(request):
-    args = None
-    return render(request, 'html/test.html', args)
+    send_mail(
+        'One',
+        'Two',
+        '1204instagram@gmail.com',
+        ['nik.makarevskij@yandex.ru'],
+        fail_silently=False,
+    )
+    return HttpResponse('<h1>Sent.</h1>')

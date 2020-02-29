@@ -30,11 +30,7 @@ class Article(models.Model):
     status = models.CharField(max_length=10, choices=status, default='Draft')
 
     def get_absolute_url(self):
-        return reverse('article_detail',
-                       args=[self.publish.year,
-                             self.publish.strftime('%m'),
-                             self.publish.strftime('%d'),
-                             self.slug])
+        return reverse('article_detail', args=[self.slug])
 
 
 class Meta:
