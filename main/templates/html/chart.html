@@ -1,0 +1,16 @@
+{% extends 'html/base.html' %}
+
+{% block title %}
+    Chart
+{% endblock %}
+
+{% block nav %}
+    {% include 'html/elements/nav.html' with is_chart=True %}
+{% endblock %}
+
+
+{% block content %}
+    <div id="chart-container" class="chart">
+        {{ output|safe }}
+    </div>
+{% endblock %}

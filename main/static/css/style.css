@@ -35,7 +35,7 @@ a:active {
 
 .content {
     display: table;
-    margin: 100px auto;
+    margin: 100px auto 0 auto;
 }
 
 .active {
@@ -124,6 +124,10 @@ a:active {
     left: 0;
 }
 
+.chart {
+    margin-bottom: 100px;
+}
+
 .share-post {
     position: absolute;
     top: 50%;
@@ -136,6 +140,10 @@ a:active {
 nav .pagination {
     padding-top: 10px;
 
+}
+
+.pagination .page-item .page-link {
+    border-right: 5px solid #222222;
 }
 
 .pagination-span {

@@ -5,6 +5,8 @@ from .models import User, Article
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 from .form import EmailArticleFrom
 from django.core.mail import send_mail
+from collections import OrderedDict
+from .fusioncharts import FusionCharts
 
 
 def article_share(request, article_slug):
@@ -12,29 +14,23 @@ def article_share(request, article_slug):
     sent = False
     if request.method == 'POST':
         form = EmailArticleFrom(request.POST)
-        print('form if: ', form)
         if form.is_valid():
             cd = form.cleaned_data
-            print(cd)
             article_url = request.build_absolute_uri(article.get_absolute_url())
             subject = '{} ({}) recommends for reading "{}"'.format(cd['name'],
                                                                    cd['email_from'],
                                                                    article.title)
-            print(subject)
 
             message = 'Article: "{}".\nLink: {}'.format(article.title, article_url)
-            print(message)
             send_mail(subject, message, '1204instagram@gmail.com', [cd['email_to']])
             sent = True
     else:
         form = EmailArticleFrom()
-        print('form else: ', form)
     args = {
         'article': article,
         'form': form,
         'sent': sent
     }
-    print(args)
     return render(request, 'html/articles/share.html', args)
 
 
@@ -104,6 +100,46 @@ def article_detail(request, slug_text):
 def add_article(request):
     args = None
     return render(request, 'html/add_article.html', args)
+
+
+def chart(request):
+    # Chart data is passed to the `dataSource` parameter, like a dictionary in the form of key-value pairs.
+    dataSource = OrderedDict()
+
+    # The `chartConfig` dict contains key-value pairs of data for chart attribute
+    chartConfig = OrderedDict()
+    chartConfig["caption"] = "Countries With Most Oil Reserves [2017-18]"
+    chartConfig["subCaption"] = "In MMbbl = One Million barrels"
+    chartConfig["xAxisName"] = "Country"
+    chartConfig["yAxisName"] = "Reserves (MMbbl)"
+    chartConfig["numberSuffix"] = "K"
+    chartConfig["exportEnabled"] = "1"
+    chartConfig["theme"] = "fusion"
+
+    dataSource["chart"] = chartConfig
+    dataSource["data"] = []
+
+    # The data for the chart should be in an array wherein each element of the array  is a JSON object having the `label` and `value` as keys.
+    # Insert the data into the `dataSource['data']` list.
+    dataSource["data"].append({"label": 'Venezuela', "value": '290'})
+    dataSource["data"].append({"label": 'Saudi', "value": '290'})
+    dataSource["data"].append({"label": 'Canada', "value": '180'})
+    dataSource["data"].append({"label": 'Iran', "value": '140'})
+    dataSource["data"].append({"label": 'Russia', "value": '115'})
+    dataSource["data"].append({"label": 'Russia', "value": '115'})
+    dataSource["data"].append({"label": 'UAE', "value": '100'})
+    dataSource["data"].append({"label": 'US', "value": '30'})
+    dataSource["data"].append({"label": 'China', "value": '30'})
+
+    # Create an object for the column 2D chart using the FusionCharts class constructor
+    # The chart data is passed to the `dataSource` parameter.
+    column2D = FusionCharts("spline", "chart", "1000", "600", "chart-container", "json", dataSource)
+
+    args = {
+        'output': column2D.render()
+    }
+
+    return render(request, 'html/chart.html', args)
 
 
 def test(request):
