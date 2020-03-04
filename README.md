@@ -19,3 +19,4 @@ Django, SQLlite, MDBootstap.
 ### In the future:
 * sth more.
 ---
+![Screenshot](https://github.com/biryukov12/djangotest/blob/master/main/static/img/github_readme.jpg)
