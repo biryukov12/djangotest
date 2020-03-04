@@ -36,6 +36,11 @@ def article_share(request, article_slug):
     return render(request, 'html/articles/share.html', args)
 
 
+def article_delete(request, article_slug):
+    article = get_object_or_404(Article, slug=article_slug).delete()
+    return redirect('/articles/')
+
+
 def custom_404(request, exception):
     data = {"name": "ThePythonDjango.com"}
     return render(request, 'html/404.html', data)

@@ -17,12 +17,16 @@
                 Published {{ article.publish }} | by {{ article.author }}
         </small>
         <div class="share-post-btn">
-            <button class="btn btn-pink btn-sm">
-            <a href="/articles"><<</a>
+            <button class="btn btn-light btn-sm">
+            <a href="/articles" style="color:#222;"><< back</a>
             </button>
-            <button class="btn btn-pink btn-sm">
-            <a href="{% url "article_share" article.slug %}">Share this article</a>
+            <button class="btn btn-pink btn-sm" style="position: absolute; right: 125px;">
+            <a href="{% url "article_share" article.slug %}">Share by e-mail</a>
             </button>
+            <button class="btn btn-danger btn-sm" style="position: absolute; right: 15px;">
+            <a href="{% url "article_delete" article.slug %}">Delete</a>
+            </button>
+
         </div>
     </div>
 {% endblock %}

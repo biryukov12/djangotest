@@ -11,6 +11,7 @@ urlpatterns = [
     path('articles/<slug:slug_text>', views.article_detail, name='article_detail'),
     path('add_article/', views.add_article),
     path('<article_slug>/share/', views.article_share, name='article_share'),
+    path('<article_slug>/delete/', views.article_delete, name='article_delete'),
     path('chart/', views.chart, name='chart'),
     path('test/', views.test),
 
