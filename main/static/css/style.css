@@ -35,7 +35,7 @@ a:active {
 
 .content {
     display: table;
-    margin: 100px auto 0 auto;
+    margin: 0 auto 0 auto;
 }
 
 .active {
@@ -125,7 +125,7 @@ a:active {
 }
 
 .chart {
-    margin-bottom: 100px;
+    margin-top: 100px;
 }
 
 .share-post {
@@ -137,9 +137,9 @@ a:active {
     left: 0;
 }
 
-nav .pagination {
-    padding-top: 10px;
-
+.custom-select {
+    background-color: #222;
+    color: #f2f2f2;
 }
 
 .pagination .page-item .page-link {
@@ -171,7 +171,11 @@ nav .pagination {
 }
 
 .md-form {
-    width: 400px;
+    min-width: 500px;
+}
+
+.md-textarea {
+    min-width: 500px;
 }
 
 .share-post-btn a {
@@ -187,4 +191,9 @@ hr {
     color: #454545;
     background-color: #454545;
     margin: 10px 0;
+}
+
+.add-article {
+    display: table;
+    margin: 0 auto;
 }

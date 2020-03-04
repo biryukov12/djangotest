@@ -8,12 +8,11 @@
                 <a class="page-link" href="?page={{ page.previous_page_number }}">Previous</a>
             </li>
         {% endif %}
-        
-    
+
             {% for num in page.paginator.page_range %}
                 {% if page.number == num %}
                     <li class="page-item">
-                        <a class="page-link" href="?page={{ num }}" style="background-color: #151515">{{ num }}</a>
+                        <a class="page-link" href="?page={{ num }}" style="background-color: #181818">{{ num }}</a>
                     </li>
                 {% elif num > page.number|add:'-3' and num < page.number|add:'3' %}
                     <li class="page-item">
@@ -21,9 +20,6 @@
                     </li>
                 {% endif %}             
             {% endfor %}
-            
-    
-
 
         {% if page.has_next %}
             <li class="page-item">
@@ -33,5 +29,7 @@
                 <a class="page-link" href="?page={{ page.paginator.num_pages }}"> &raquo;</a>
             </li>
         {% endif %}
+        <div style="position: absolute; right: 0; margin-top: 5px">Articles count: {{ articles_count }}</div>
     </ul>
 </nav>
+

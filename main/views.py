@@ -3,17 +3,19 @@ from django.http import HttpResponse
 from django.template import RequestContext
 from .models import User, Article
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
-from .form import EmailArticleFrom
+from .email_article_form import EmailArticleForm
+from .add_article_form import AddArticleForm
 from django.core.mail import send_mail
 from collections import OrderedDict
 from .fusioncharts import FusionCharts
+from datetime import datetime
 
 
 def article_share(request, article_slug):
     article = get_object_or_404(Article, slug=article_slug)
     sent = False
     if request.method == 'POST':
-        form = EmailArticleFrom(request.POST)
+        form = EmailArticleForm(request.POST)
         if form.is_valid():
             cd = form.cleaned_data
             article_url = request.build_absolute_uri(article.get_absolute_url())
@@ -25,7 +27,7 @@ def article_share(request, article_slug):
             send_mail(subject, message, '1204instagram@gmail.com', [cd['email_to']])
             sent = True
     else:
-        form = EmailArticleFrom()
+        form = EmailArticleForm()
     args = {
         'article': article,
         'form': form,
@@ -64,6 +66,7 @@ def users(request):
 def article_list(request):
     articles_list = Article.objects.all()
     paginator = Paginator(articles_list, 3)
+    articles_count = paginator.count
     page = request.GET.get('page')
     try:
         articles = paginator.page(page)
@@ -74,7 +77,8 @@ def article_list(request):
 
     args = {
         'page': page,
-        'articles': articles
+        'articles': articles,
+        'articles_count': articles_count
     }
 
     return render(request, 'html/articles/list.html', args)
@@ -98,48 +102,59 @@ def article_detail(request, slug_text):
 
 
 def add_article(request):
-    args = None
+    form = AddArticleForm(request.POST or None)
+    if form.is_valid():
+        form.save()
+        return redirect('/articles/')
+    args = {
+        'form': form
+    }
     return render(request, 'html/add_article.html', args)
 
 
 def chart(request):
-    # Chart data is passed to the `dataSource` parameter, like a dictionary in the form of key-value pairs.
-    dataSource = OrderedDict()
-
-    # The `chartConfig` dict contains key-value pairs of data for chart attribute
-    chartConfig = OrderedDict()
-    chartConfig["caption"] = "Countries With Most Oil Reserves [2017-18]"
-    chartConfig["subCaption"] = "In MMbbl = One Million barrels"
-    chartConfig["xAxisName"] = "Country"
-    chartConfig["yAxisName"] = "Reserves (MMbbl)"
-    chartConfig["numberSuffix"] = "K"
-    chartConfig["exportEnabled"] = "1"
-    chartConfig["theme"] = "fusion"
-
-    dataSource["chart"] = chartConfig
-    dataSource["data"] = []
-
-    # The data for the chart should be in an array wherein each element of the array  is a JSON object having the `label` and `value` as keys.
-    # Insert the data into the `dataSource['data']` list.
-    dataSource["data"].append({"label": 'Venezuela', "value": '290'})
-    dataSource["data"].append({"label": 'Saudi', "value": '290'})
-    dataSource["data"].append({"label": 'Canada', "value": '180'})
-    dataSource["data"].append({"label": 'Iran', "value": '140'})
-    dataSource["data"].append({"label": 'Russia', "value": '115'})
-    dataSource["data"].append({"label": 'Russia', "value": '115'})
-    dataSource["data"].append({"label": 'UAE', "value": '100'})
-    dataSource["data"].append({"label": 'US', "value": '30'})
-    dataSource["data"].append({"label": 'China', "value": '30'})
-
-    # Create an object for the column 2D chart using the FusionCharts class constructor
-    # The chart data is passed to the `dataSource` parameter.
-    column2D = FusionCharts("spline", "chart", "1000", "600", "chart-container", "json", dataSource)
-
     args = {
-        'output': column2D.render()
+        "chart": {
+            "caption": "Split of Revenue by Product Categories",
+            "subCaption": "Last year",
+            "numberPrefix": "$",
+            "defaultCenterLabel": "Total revenue: $64.08K",
+            "centerLabel": "Revenue from $label: $value",
+            "decimals": "0",
+            "exportEnabled": "1",
+            "theme": "candy",
+            "bgColor": "#323232",
+            "paletteColors": "#ec407a"
+        },
+        "data": [
+            {
+                "label": "Food",
+                "value": "28504"
+            },
+            {
+                "label": "Apparels",
+                "value": "14633"
+            },
+            {
+                "label": "Electronics",
+                "value": "10507"
+            },
+            {
+                "label": "Household",
+                "value": "4910"
+            }
+        ]
     }
 
-    return render(request, 'html/chart.html', args)
+    doughnut2d = FusionCharts("doughnut2d", "chart", "800", "650", "chart-container", "json", args)
+    column2d = FusionCharts("column2d", "chart", "800", "600", "chart-container", "json", args)
+
+    output = {
+        'doughnut2d': doughnut2d.render(),
+        'column2d': column2d.render()
+    }
+
+    return render(request, 'html/chart.html', output)
 
 
 def test(request):

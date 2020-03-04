@@ -1,6 +1,7 @@
 from django.db import models
 from django.utils import timezone
 from django.urls import reverse
+from datetime import datetime
 from djangotest.utils import unique_slug_generator
 from django.db.models.signals import pre_save
 
@@ -20,11 +21,11 @@ class Article(models.Model):
     author = models.CharField(max_length=200, null=False, default='Nikita Biryukov')
     body = models.TextField(default='Lorem ipsum dolor sit amet, consectetur adipisicing elit. A culpa et explicabo '
                                     'natus odit quod repellendus saepe. Ab autem corporis deleniti dolore ducimus '
-                                    'expedita, impedit, labore recusandae rerum saepe veniam?</span><span>Amet dicta '
+                                    'expedita, impedit, labore recusandae rerum saepe veniam? Amet dicta '
                                     'distinctio earum esse est iure maiores neque nesciunt nulla omnis optio quaerat '
                                     'quis, rerum, sapiente, similique temporibus velit voluptate voluptatem. '
                                     'Consectetur consequuntur corporis natus nulla qui quos, ullam!')
-    publish = models.DateTimeField(default=timezone.now)
+    publish = models.DateTimeField(default=datetime.now())
     created = models.DateTimeField(auto_now_add=True)
     updated = models.DateTimeField(auto_now=True)
     status = models.CharField(max_length=10, choices=status, default='Draft')
@@ -32,9 +33,8 @@ class Article(models.Model):
     def get_absolute_url(self):
         return reverse('article_detail', args=[self.slug])
 
-
-class Meta:
-    ordering = ('-publish',)
+    class Meta:
+        ordering = ('-publish',)
 
 
 def slug_generator(sender, instance, *args, **kwargs):

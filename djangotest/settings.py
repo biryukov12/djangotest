@@ -109,9 +109,24 @@ LANGUAGE_CODE = 'en-us'
 
 TIME_ZONE = 'Europe/Moscow'
 
+DATETIME_INPUT_FORMATS = [
+    '%d.%m.%Y',
+    '%d.%m.%Y %H:%M'
+]
+
+DATE_INPUT_FORMATS = [
+    '%d.%m.%Y', '%d.%m.%Y',
+    '%d %b %Y', '%d %b, %Y',
+    '%d %B %Y', '%d %B, %Y',
+]
+
+DATETIME_FORMAT = 'd.m.Y H:i'
+
+DATE_FORMAT = 'd.m.Y'
+
 USE_I18N = True
 
-USE_L10N = True
+USE_L10N = False
 
 USE_TZ = True
 

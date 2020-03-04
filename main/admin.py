@@ -11,3 +11,4 @@ class UserAdmin(admin.ModelAdmin):
 class ArticleAdmin(admin.ModelAdmin):
     list_display = ('id', 'title', 'slug', 'author', 'publish', 'status')
     list_display_links = ('id', 'title')
+    ordering = ['status', 'publish']

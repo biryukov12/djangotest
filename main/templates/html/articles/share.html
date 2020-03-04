@@ -4,7 +4,7 @@
     Share: "{{ article.slug }}"
 {% endblock %}
 
-{% block nav %} {% include 'html/elements/nav.html' with is_home=True %} {% endblock %}
+{% block nav %} {% include 'html/elements/nav.html' with is_articles=True %} {% endblock %}
 
 {% block content %}
     {% if sent %}

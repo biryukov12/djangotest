@@ -1,11 +1,26 @@
 {% extends 'html/base.html' %}
 
 {% block title %}
-    Add user
+    Add article
 {% endblock %}
 
 {% block nav %} {% include 'html/elements/nav.html' with is_add_article=True %} {% endblock %}
 
 {% block content %}
-    <h1>Coming soon.</h1>
+    <div style="width: 100%; margin: 100px auto">
+        <h1> Add article: </h1>
+        <form action="." method="post" class="add-article">
+            {% csrf_token %}
+            {% for field in form %}
+                <div class="md-form">
+                    {% if field.name != 'status' %}
+                        <label for="{{ field.name }}">{{ field.label }}</label> {{ field }}
+                    {% else %}
+                         <label for="{{ field.name }}"></label> {{ field }}
+                    {% endif %}
+                </div>
+            {% endfor %}
+            <button type="submit" class="btn btn-pink btn-block">Share</button>
+        </form>
+    </div>
 {% endblock %}
