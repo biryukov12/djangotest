@@ -13,6 +13,6 @@ urlpatterns = [
     path('<article_slug>/share/', views.article_share, name='article_share'),
     path('<article_slug>/delete/', views.article_delete, name='article_delete'),
     path('chart/', views.chart, name='chart'),
-    path('test/', views.test),
+    path('test/', views.test, name='test'),
 
 ]

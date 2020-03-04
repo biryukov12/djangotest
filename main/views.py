@@ -41,11 +41,6 @@ def article_delete(request, article_slug):
     return redirect('/articles/')
 
 
-def custom_404(request, exception):
-    data = {"name": "ThePythonDjango.com"}
-    return render(request, 'html/404.html', data)
-
-
 def home(request):
     return render(request, 'html/index.html')
 
@@ -79,13 +74,11 @@ def article_list(request):
         articles = paginator.page(1)
     except EmptyPage:
         articles = paginator.page(paginator.num_pages)
-
     args = {
         'page': page,
         'articles': articles,
         'articles_count': articles_count
     }
-
     return render(request, 'html/articles/list.html', args)
 
 
@@ -97,12 +90,10 @@ def article_detail(request, slug_text):
     else:
         return HttpResponse(arg)
     articles = Article.objects.all()
-
     args = {
         'article': a,
         'articles': articles
     }
-
     return render(request, 'html/articles/detail.html', args)
 
 
@@ -150,24 +141,12 @@ def chart(request):
             }
         ]
     }
-
-    doughnut2d = FusionCharts("doughnut2d", "chart", "800", "650", "chart-container", "json", args)
     column2d = FusionCharts("column2d", "chart", "800", "600", "chart-container", "json", args)
-
     output = {
-        'doughnut2d': doughnut2d.render(),
         'column2d': column2d.render()
     }
-
     return render(request, 'html/chart.html', output)
 
 
 def test(request):
-    send_mail(
-        'One',
-        'Two',
-        '1204instagram@gmail.com',
-        ['nik.makarevskij@yandex.ru'],
-        fail_silently=False,
-    )
-    return HttpResponse('<h1>Sent.</h1>')
+    return render(request, 'html/test.html')
