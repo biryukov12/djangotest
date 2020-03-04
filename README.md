@@ -11,11 +11,11 @@ Django, SQLlite, MDBootstap.
   * make slug of article and own adress by slug;
   * pagination;
   * share article by e-mail.
+  * add article from form
 * Send e-mail.
 * Chart
 
 ### In the future:
-* add new article form form;
 * sth more.
 ---
 ![Screenshot](https://github.com/biryukov12/djangotest/blob/master/main/static/img/github.jpg)
