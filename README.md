@@ -12,12 +12,10 @@ Django, SQLlite, MDBootstap.
   * pagination;
   * share article by e-mail.
 * Send e-mail.
-* Design.
+* Chart
 
 ### In the future:
-* improvement pagination;
 * add new article form form;
+* sth more.
 ---
-Говно, в общем.
-
 ![Screenshot](https://github.com/biryukov12/djangotest/blob/master/main/static/img/github.jpg)
