@@ -10,10 +10,11 @@ Django, SQLlite, MDBootstap.
   * view full article on a separate page;
   * make slug of article and own adress by slug;
   * pagination;
-  * share article by e-mail.
-  * add article from form
+  * share article by e-mail;
+  * add article from form;
+  * delete article.
 * Send e-mail.
-* Chart
+* Chart.
 
 ### In the future:
 * sth more.
