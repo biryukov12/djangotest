@@ -131,9 +131,15 @@ USE_L10N = False
 
 USE_TZ = True
 
-
-# Static files
+# Static files (CSS, JavaScript, Images)
+# https://docs.djangoproject.com/en/1.9/howto/static-files/
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATIC_URL = '/static/'
+
+# Extra places for collectstatic to find static files.
+STATICFILES_DIRS = (
+    os.path.join(BASE_DIR, 'static'),
+)
 
 # Media files
 MEDIA_URL = '/media/'
@@ -145,3 +151,11 @@ EMAIL_HOST_USER = '1204instagram@gmail.com'
 EMAIL_HOST_PASSWORD = '1337conditioned1337'
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
+
+MIDDLEWARE_CLASSES = (
+    # Simplified static file serving.
+    # https://warehouse.python.org/project/whitenoise/
+    'whitenoise.middleware.WhiteNoiseMiddleware',
+)
+
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
