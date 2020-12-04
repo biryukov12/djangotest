@@ -3391,7 +3391,7 @@ XRegExp.prototype = new RegExp();
  * The XRegExp version number as a string containing three dot-separated parts. For example,
  * '2.0.0-beta-3'.
  *
- * @static
+ * @staticfiles
  * @memberOf XRegExp
  * @type String
  */
