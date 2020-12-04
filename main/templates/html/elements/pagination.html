@@ -1,5 +1,6 @@
 <nav class="pagination" aria-label="Page navigation example">
     <ul class="pagination">
+
         {% if page.has_previous %}
             <li class="page-item">
                 <a class="page-link" href="?page=1">&laquo; </a>
@@ -9,17 +10,22 @@
             </li>
         {% endif %}
 
-            {% for num in page.paginator.page_range %}
-                {% if page.number == num %}
+        {% for num in page.paginator.page_range %}
+            {% if page.number == num %}
+                {% if page.paginator.page_range != 1 and page.has_next or page.has_previous %}
                     <li class="page-item">
                         <a class="page-link" href="?page={{ num }}" style="background-color: #181818">{{ num }}</a>
                     </li>
-                {% elif num > page.number|add:'-3' and num < page.number|add:'3' %}
-                    <li class="page-item">
-                        <a class="page-link" href="?page={{ num }}">{{ num }}</a>
-                    </li>
-                {% endif %}             
-            {% endfor %}
+                {% else %}
+                    <li class="page-item"></li>
+                {% endif %}
+
+            {% elif num > page.number|add:'-3' and num < page.number|add:'3' %}
+                <li class="page-item">
+                    <a class="page-link" href="?page={{ num }}">{{ num }}</a>
+                </li>
+            {% endif %}
+        {% endfor %}
 
         {% if page.has_next %}
             <li class="page-item">
@@ -29,6 +35,7 @@
                 <a class="page-link" href="?page={{ page.paginator.num_pages }}"> &raquo;</a>
             </li>
         {% endif %}
+
         <div style="position: absolute; right: 0; margin-top: 5px">Articles count: {{ articles_count }}</div>
     </ul>
 </nav>

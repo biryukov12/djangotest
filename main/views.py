@@ -11,36 +11,6 @@ from .fusioncharts import FusionCharts
 from datetime import datetime
 
 
-def article_share(request, article_slug):
-    article = get_object_or_404(Article, slug=article_slug)
-    sent = False
-    if request.method == 'POST':
-        form = EmailArticleForm(request.POST)
-        if form.is_valid():
-            cd = form.cleaned_data
-            article_url = request.build_absolute_uri(article.get_absolute_url())
-            subject = '{} ({}) recommends for reading "{}"'.format(cd['name'],
-                                                                   cd['email_from'],
-                                                                   article.title)
-
-            message = 'Article: "{}".\nLink: {}'.format(article.title, article_url)
-            send_mail(subject, message, '1204instagram@gmail.com', [cd['email_to']])
-            sent = True
-    else:
-        form = EmailArticleForm()
-    args = {
-        'article': article,
-        'form': form,
-        'sent': sent
-    }
-    return render(request, 'html/articles/share.html', args)
-
-
-def article_delete(request, article_slug):
-    article = get_object_or_404(Article, slug=article_slug).delete()
-    return redirect('/articles/')
-
-
 def home(request):
     return render(request, 'html/index.html')
 
@@ -64,7 +34,7 @@ def users(request):
 
 
 def article_list(request):
-    articles_list = Article.objects.all()
+    articles_list = Article.objects.filter(status='published')
     paginator = Paginator(articles_list, 3)
     articles_count = paginator.count
     page = request.GET.get('page')
@@ -97,6 +67,31 @@ def article_detail(request, slug_text):
     return render(request, 'html/articles/detail.html', args)
 
 
+def article_share(request, article_slug):
+    article = get_object_or_404(Article, slug=article_slug)
+    sent = False
+    if request.method == 'POST':
+        form = EmailArticleForm(request.POST)
+        if form.is_valid():
+            cd = form.cleaned_data
+            article_url = request.build_absolute_uri(article.get_absolute_url())
+            subject = '{} ({}) recommends for reading "{}"'.format(cd['name'],
+                                                                   cd['email_from'],
+                                                                   article.title)
+
+            message = 'Article: "{}".\nLink: {}'.format(article.title, article_url)
+            send_mail(subject, message, '1204instagram@gmail.com', [cd['email_to']])
+            sent = True
+    else:
+        form = EmailArticleForm()
+    args = {
+        'article': article,
+        'form': form,
+        'sent': sent
+    }
+    return render(request, 'html/articles/share.html', args)
+
+
 def add_article(request):
     form = AddArticleForm(request.POST or None)
     if form.is_valid():
@@ -106,6 +101,11 @@ def add_article(request):
         'form': form
     }
     return render(request, 'html/add_article.html', args)
+
+
+def article_delete(request, article_slug):
+    article = get_object_or_404(Article, slug=article_slug).delete()
+    return redirect('/articles/')
 
 
 def chart(request):
