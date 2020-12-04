@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="33f0a259-75e2-4406-b88a-419cc6a5b3b0" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/venv/Scripts/Activate.ps1" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/venv/Scripts/activate" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/venv/Scripts/activate.bat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/venv/Scripts/deactivate.bat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/venv/Scripts/python.exe" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/venv/Scripts/pythonw.exe" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/venv/pyvenv.cfg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/djangotest.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/djangotest.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/templates/html/articles/list.html" beforeDir="false" afterPath="$PROJECT_DIR$/main/templates/html/articles/list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/templates/html/elements/pagination.html" beforeDir="false" afterPath="$PROJECT_DIR$/main/templates/html/elements/pagination.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/main/views.py" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
+  </component>
+  <component name="DjangoConsoleOptions" custom-start-script="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)">
+    <option name="myCustomStartScript" value="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)" />
+  </component>
+  <component name="FavoritesManager">
+    <favorites_list name="djangotest" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+        <option value="CSS File" />
+        <option value="Python Script" />
+        <option value="HTML File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GithubProjectSettings">
+    <option name="CREATE_PULL_REQUEST_DEFAULT_BRANCH" value="master" />
+    <option name="CREATE_PULL_REQUEST_DEFAULT_REPO_USER" value="biryukov12" />
+    <option name="CREATE_PULL_REQUEST_DEFAULT_REPO_NAME" value="djangotest" />
+  </component>
+  <component name="IgnoredFileRootStore">
+    <option name="generatedRoots">
+      <set>
+        <option value="D:\YandexDisk\djangotest\.idea" />
+      </set>
+    </option>
+  </component>
+  <component name="JupyterTrust" id="be47187d-0111-4c1c-a680-cf4d7eda8a28" />
+  <component name="ProjectId" id="1Y8I1vYc20RRwTwNXW6vYgmwhDw" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+    <option name="sortByType" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
+    <property name="run.code.analysis.last.selected.profile" value="aDefault" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\YandexDisk\djangotest\main\static\fusioncharts" />
+      <recent name="D:\YandexDisk\djangotest\main" />
+      <recent name="D:\YandexDisk\djangotest\main\templates" />
+      <recent name="D:\YandexDisk\djangotest\main\static\css" />
+      <recent name="D:\YandexDisk\djangotest\main\templates\html\elements" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\YandexDisk\djangotest\main" />
+      <recent name="D:\YandexDisk\djangotest\accounts\templates\html" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="djangotest" type="Python.DjangoServer" factoryName="Django server">
+      <module name="djangotest" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="launchJavascriptDebuger" value="false" />
+      <option name="port" value="8000" />
+      <option name="host" value="" />
+      <option name="additionalOptions" value="" />
+      <option name="browserUrl" value="" />
+      <option name="runTestServer" value="false" />
+      <option name="runNoReload" value="false" />
+      <option name="useCustomRunCommand" value="false" />
+      <option name="customRunCommand" value="" />
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="33f0a259-75e2-4406-b88a-419cc6a5b3b0" name="Default Changelist" comment="" />
+      <created>1582317583314</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1582317583314</updated>
+      <workItem from="1582317586033" duration="40438000" />
+      <workItem from="1582511533716" duration="300000" />
+      <workItem from="1582512016175" duration="13601000" />
+      <workItem from="1582657019522" duration="57578000" />
+      <workItem from="1582933867006" duration="34973000" />
+      <workItem from="1583143710058" duration="48970000" />
+      <workItem from="1583597974509" duration="1999000" />
+      <workItem from="1583854855510" duration="14000" />
+      <workItem from="1585715677070" duration="72000" />
+      <workItem from="1585715777409" duration="110000" />
+      <workItem from="1585716093545" duration="139000" />
+      <workItem from="1585716406332" duration="1292000" />
+      <workItem from="1585718232673" duration="3095000" />
+    </task>
+    <task id="LOCAL-00001" summary="add buttons">
+      <created>1582959526371</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1582959526371</updated>
+    </task>
+    <task id="LOCAL-00002" summary="update buttons">
+      <created>1582965537367</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1582965537367</updated>
+    </task>
+    <task id="LOCAL-00003" summary="fix css">
+      <created>1582967761569</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1582967761569</updated>
+    </task>
+    <task id="LOCAL-00004" summary="add share by e-mail">
+      <created>1583000456428</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1583000456428</updated>
+    </task>
+    <task id="LOCAL-00005" summary="update pagination&#10;add chart(create and draw)">
+      <created>1583083997040</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1583083997040</updated>
+    </task>
+    <task id="LOCAL-00006" summary="add article form">
+      <created>1583319213612</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1583319213612</updated>
+    </task>
+    <task id="LOCAL-00007" summary="add delete article func">
+      <created>1583324039576</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1583324039576</updated>
+    </task>
+    <task id="LOCAL-00008" summary="fix some problems">
+      <created>1583338290758</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1583338290758</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="add buttons" />
+    <MESSAGE value="update buttons" />
+    <MESSAGE value="fix css" />
+    <MESSAGE value="add share by e-mail" />
+    <MESSAGE value="update pagination&#10;add chart(create and draw)" />
+    <MESSAGE value="add article form" />
+    <MESSAGE value="add delete article func" />
+    <MESSAGE value="fix some problems" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix some problems" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="552" y="182" key="#Notifications" timestamp="1583000535926">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="552" y="182" key="#Notifications/0.0.1920.1050@0.0.1920.1050" timestamp="1583000535926" />
+    <state x="552" y="182" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1585721135027">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="552" y="182" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1050@0.0.1920.1050" timestamp="1585721135027" />
+    <state x="719" y="327" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1582331238880">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="719" y="327" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1050@0.0.1920.1050" timestamp="1582331238880" />
+    <state x="690" y="271" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1582833304018">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="690" y="271" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1050@0.0.1920.1050" timestamp="1582833304018" />
+    <state x="707" y="380" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1583168084382">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="707" y="380" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.1920.1050@0.0.1920.1050" timestamp="1583168084382" />
+    <state x="585" y="118" key="CommitChangelistDialog2" timestamp="1583338290279">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="585" y="118" key="CommitChangelistDialog2/0.0.1920.1050@0.0.1920.1050" timestamp="1583338290279" />
+    <state x="740" y="265" key="FileChooserDialogImpl" timestamp="1585717245668">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="740" y="265" key="FileChooserDialogImpl/0.0.1920.1050@0.0.1920.1050" timestamp="1585717245668" />
+    <state x="745" y="391" key="Github.CreatePullRequestDialog" timestamp="1582965837851">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="745" y="391" key="Github.CreatePullRequestDialog/0.0.1920.1050@0.0.1920.1050" timestamp="1582965837851" />
+    <state x="836" y="417" width="260" height="215" key="Github.ShareDialog" timestamp="1582957049606">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="836" y="417" width="260" height="215" key="Github.ShareDialog/0.0.1920.1050@0.0.1920.1050" timestamp="1582957049606" />
+    <state x="799" y="229" key="Github.UntrackedFilesDialog" timestamp="1582957068643">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="799" y="229" key="Github.UntrackedFilesDialog/0.0.1920.1050@0.0.1920.1050" timestamp="1582957068643" />
+    <state x="461" y="166" key="SettingsEditor" timestamp="1585716800935">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="461" y="166" key="SettingsEditor/0.0.1920.1050@0.0.1920.1050" timestamp="1585716800935" />
+    <state x="552" y="257" key="Vcs.Push.Dialog.v2" timestamp="1583338351810">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="552" y="257" key="Vcs.Push.Dialog.v2/0.0.1920.1050@0.0.1920.1050" timestamp="1583338351810" />
+    <state x="769" y="441" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1582959495822">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="769" y="441" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1050@0.0.1920.1050" timestamp="1582959495822" />
+    <state x="623" y="227" width="672" height="678" key="search.everywhere.popup" timestamp="1582964715099">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="623" y="227" width="672" height="678" key="search.everywhere.popup/0.0.1920.1050@0.0.1920.1050" timestamp="1582964715099" />
+  </component>
+</project>
