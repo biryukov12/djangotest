@@ -12,13 +12,21 @@ https://docs.djangoproject.com/en/3.0/ref/settings/
 
 import os
 
-
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
+import django_heroku
+
+...
+# All of your settings here
+...
+django_heroku.settings(locals())
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.0/howto/deployment/checklist/
+
+import dj_database_url
+
 
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = '0xz_jv9-p=cp_9e6k^ycm+a2^4(dc)%10e2*2l15^458-@rqes'
@@ -27,7 +35,6 @@ SECRET_KEY = '0xz_jv9-p=cp_9e6k^ycm+a2^4(dc)%10e2*2l15^458-@rqes'
 DEBUG = True
 
 ALLOWED_HOSTS = []
-
 
 # Application definition
 
@@ -72,7 +79,6 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'djangotest.wsgi.application'
 
-
 # Database
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
 
@@ -82,7 +88,6 @@ DATABASES = {
         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/3.0/ref/settings/#auth-password-validators
@@ -101,7 +106,6 @@ AUTH_PASSWORD_VALIDATORS = [
         'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
     },
 ]
-
 
 # Internationalization
 # https://docs.djangoproject.com/en/3.0/topics/i18n/
@@ -131,12 +135,9 @@ USE_L10N = False
 
 USE_TZ = True
 
-BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
 STATIC_URL = '/static/'
-STATICFILES_DIRS = (
-    os.path.join(BASE_DIR, 'static'),
-)
+STATIC_ROOT = os.path.join(PROJECT_ROOT, 'static')
 
 # Media files
 MEDIA_URL = '/media/'
@@ -150,7 +151,7 @@ EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 
 MIDDLEWARE_CLASSES = (
-    # Simplified staticfiles file serving.
+    # Simplified static file serving.
     # https://warehouse.python.org/project/whitenoise/
     'whitenoise.middleware.WhiteNoiseMiddleware',
 )
