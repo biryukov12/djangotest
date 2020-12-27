@@ -32,7 +32,7 @@ SECRET_KEY = '0xz_jv9-p=cp_9e6k^ycm+a2^4(dc)%10e2*2l15^458-@rqes'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['djangotest-biryukov12.herokuapp.com']
+ALLOWED_HOSTS = ['djangotest-biryukov12.herokuapp.com', '127.0.0.1']
 
 # Application definition
 
@@ -135,7 +135,7 @@ USE_TZ = True
 
 PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
 STATIC_URL = '/static/'
-STATIC_ROOT = os.path.join(PROJECT_ROOT, 'static')
+STATIC_ROOT = os.path.join(PROJECT_ROOT, 'staticfiles')
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "static"),
 ]
